@@ -65,4 +65,5 @@ node default {
 
 #require ex72
 
+#Excercise 9.2
 include users
