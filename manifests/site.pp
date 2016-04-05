@@ -45,11 +45,10 @@ node default {
   notify { "Hello, my name is ${::hostname}": }
 }
 
-# Excercise 7.1
-file { '/etc/motd':
-  ensure  => file,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0644',
-  content => "Think before you type\n",
+# Excercise 7.2
+class ex72 {
+  exec { '/etc/motd':
+    creates => '/etc/motd',
+    command => 'cowsay 'Welcome to ${::fqdn}!' > /etc/motd',
+  }
 }
