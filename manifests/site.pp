@@ -59,6 +59,7 @@ class ex72 {
   exec { 'motd':
     creates => '/etc/motd',
     command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+    path    => '/usr/local/bin/'
   }
 }
 
