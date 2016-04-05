@@ -55,12 +55,14 @@ node default {
 #}
 
 # Excercise 7.2
-class ex72 {
-  exec { 'motd':
-    creates => '/etc/motd',
-    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-    path    => '/usr/local/bin/'
-  }
-}
+#class ex72 {
+#  exec { 'motd':
+#    creates => '/etc/motd',
+#    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+#    path    => '/usr/local/bin/'
+#  }
+#}
 
-require ex72
+#require ex72
+
+include users
