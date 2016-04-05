@@ -6,7 +6,7 @@ class skeleton {
     mode    => '0755',
   }
   file { '/etc/skel':
-    ensure  => file,,
+    ensure  => file,
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
