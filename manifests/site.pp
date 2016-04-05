@@ -47,8 +47,8 @@ node default {
 
 # Excercise 7.2
 class ex72 {
-  exec { '/etc/motd':
+  exec { 'motd':
     creates => '/etc/motd',
-    command => 'cowsay 'Welcome to ${::fqdn}!' > /etc/motd',
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
   }
 }
