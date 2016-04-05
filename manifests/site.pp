@@ -61,3 +61,5 @@ class ex72 {
     command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
   }
 }
+
+require ex72
