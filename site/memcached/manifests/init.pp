@@ -2,7 +2,7 @@ class memcached {
   package { 'memcached':
     ensure => present,
   }
-  file { '/etc/sysconfig/memcached':
+  file { 'memcached_config':
     ensure  => file,
     mode    => '0644',
     owner   => 'root',
@@ -13,6 +13,6 @@ class memcached {
   service { 'memcached':
     ensure => running,
     enable => true,
-    suscribe => File['/etc/sysconfig/memcached']
+    suscribe => File['memcached_config']
   }
 }
