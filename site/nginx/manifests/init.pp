@@ -40,7 +40,7 @@ class nginx {
     require => Package['nginx'],
     notify  => Service['nginx'],
   }
-  service { 'name':
+  service { 'nginx':
     ensure => running,
     enable => true,
   }
