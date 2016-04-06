@@ -43,6 +43,12 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
+  
+  #excercise 13.2 - conditional
+  if $::virtaul != 'physical' {
+    $vmname = capitalize($::virtual)
+    notify { "This is a ${vmname} virtual machine.": }
+  }
 }
 
 # Excercise 7.1
@@ -69,4 +75,6 @@ node default {
 #include users
 
 #Excercise 9.3
-include skeleton
+#include skeleton
+
+
