@@ -13,6 +13,6 @@ class memcached {
   service { 'memcached':
     ensure => running,
     enable => true,
-    suscribe => File['memcached_config']
+    subscribe => File['memcached_config']
   }
 }
