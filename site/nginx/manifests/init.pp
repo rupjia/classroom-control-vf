@@ -1,6 +1,8 @@
-class nginx {
-  $nginx = 'nginx'
+class nginx (
   $root = '/var/www'
+){
+  $nginx = 'nginx'
+  $docroot = "${root}/index.html"
   $index_src = "puppet:///modules/${nginx}/index.html"
   $nginx_conf_src = "puppet:///modules/${nginx}/nginx.conf"
   $nginx_default_scr = "puppet:///modules/${nginx}/default.conf"
@@ -16,7 +18,7 @@ class nginx {
   file { [ $root, '/etc/nginx/conf.d' ]:
     ensure => directory,
   }
-  file { '/var/www/index.html':
+  file { $docroot:
     ensure => file,
     source => $index_src,
   }
