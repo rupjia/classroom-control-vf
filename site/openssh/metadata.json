@@ -1,0 +1,45 @@
+{
+  "name": "fonk-openssh",
+  "version": "1.0.1",
+  "author": "fonk",
+  "summary": "Module to manage OpenSSH with focus on using augeas",
+  "license": "Apache-2.0",
+  "source": "https://github.com/fonk/fonk-openssh",
+  "project_page": "https://github.com/fonk/fonk-openssh",
+  "issues_url": "https://github.com/fonk/fonk-openssh/issues",
+  "dependencies": [
+  
+  ],
+  "data_provider": null,
+  "tags": [
+    "openssh",
+    "ssh",
+    "hostkeys"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": ">=3.5.0"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": ">=3.5.0"
+    }
+  ]
+}
